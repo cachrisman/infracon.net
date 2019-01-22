@@ -5,6 +5,9 @@
   src: url("/avenir-400.woff2") format("woff2");
   font-display: swap;
 }
+html, body {
+  height: 100%;
+}
 
 body {
   font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
@@ -13,6 +16,8 @@ body {
   color: #373F49;
   background: #eee;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 img {

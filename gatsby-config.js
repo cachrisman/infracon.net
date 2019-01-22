@@ -3,7 +3,9 @@ let contentfulConfig
 try {
   // Load the Contentful config from the .contentful.json
   contentfulConfig = require('./.contentful')
-} catch (_) {}
+} catch (_) {
+  // don't do anything if the .contentful.json file isn't found
+}
 
 // Overwrite the Contentful config with environment variables if they exist
 contentfulConfig = {

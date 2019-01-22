@@ -32,4 +32,9 @@ module.exports = {
       options: contentfulConfig,
     }
   ],
+  siteMetadata: {
+    title: `InfraCON`,
+    siteUrl: `https://www.infracon.net`,
+    description: `InfraCON`,
+  },
 }

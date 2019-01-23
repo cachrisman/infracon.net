@@ -12,7 +12,9 @@ class RootIndex extends React.Component {
 
     return (
       <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
+        <Helmet>
+          <title>{siteTitle}</title>
+        </Helmet>
         <Hero data={author.node} />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
@@ -35,6 +37,11 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
